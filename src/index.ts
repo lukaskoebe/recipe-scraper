@@ -103,7 +103,7 @@ export default async function getRecipeData(input: string | Partial<Options>, in
           if (data['@graph'] && Array.isArray(data['@graph'])) {
             data['@graph'].forEach((g) => {
               if (g['@type'] === 'Recipe')
-                recipe = data
+                recipe = g
             })
           }
 
